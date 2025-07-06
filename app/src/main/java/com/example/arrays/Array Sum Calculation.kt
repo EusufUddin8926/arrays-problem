@@ -3,8 +3,8 @@ package com.example.arrays
 fun main(){
     var i = 0
     var j = 0
+    var total = 0
     val array = IntArray(3)
-    val resArr = IntArray(3)
     while (i<3){
         val input = readln().toInt()
         array[i] = input
@@ -12,9 +12,9 @@ fun main(){
     }
 
     while (j<array.size){
-        resArr[j] = array[array.size-j-1]
+        total += array[j]
         j++
     }
 
-    println(resArr.joinToString())
+    println(total)
 }
